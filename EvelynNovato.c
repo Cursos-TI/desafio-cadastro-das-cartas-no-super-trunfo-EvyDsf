@@ -17,8 +17,6 @@ int main () {
     char codigo2 [10];
     char cidade2 [10];
 
-
-
 //Quis criar uma interação com o usuário criando as cartas de maneira limpa com o código
 
 
@@ -80,6 +78,18 @@ printf ("Agora por último, me diz quantos pontos turisticos tem nessa cidade: \
 scanf ("%d", &ponto2);
 
 
+
+
+
+// Os calculos na variavel float, de densidade e pib per capita
+
+
+float densidade1 =  populacao1/ area1;
+float densidade2 = populacao2/ area2;
+float percapita1 = PIB1/ populacao1;
+float percapita2 = PIB2/ populacao2;
+
+
 // agora a apresentação das duas cartas de forma mais limpa que consegui reproduzir
 
 printf ("\n");
@@ -90,14 +100,14 @@ printf ("CARTA 1 \n");
 printf ("\n");
 
 
-printf ("Estado: %c \n Código: %s \n Nome da Cidade: %s \n População: %d \n Área: %f \n PIB: %f \n Número De Pontos Turísticos: %d \n", letra1, codigo1, cidade1, populacao1, area1, PIB1, ponto1);
+printf ("Estado: %c \n Código: %s \n Nome da Cidade: %s \n População: %d \n Área: %f \n PIB: %f \n Número De Pontos Turísticos: %d \n Densidade Populacional: %.2f \n PIB Per Capita: %.2f \n", letra1, codigo1, cidade1, populacao1, area1, PIB1, ponto1, densidade1, percapita1);
 
 printf  ("\n");
 printf ("\n");  
 
 printf ("CARTA2 \n");
 printf ("\n");
-printf ("Estado: %s \n Código: %s \n Nome da Cidade: %s \n População: %d \n Área: %f \n PIB: %f \n Número De Pontos Turísticos: %d \n", letra2, codigo2, cidade2, populacao2, area2, PIB2, ponto2);
+printf ("Estado: %s \n Código: %s \n Nome da Cidade: %s \n População: %d \n Área: %f \n PIB: %f \n Número De Pontos Turísticos: %d \n Densidade Populacional: %.2f \n PIB Per Capita: %.2f \n", letra2, codigo2, cidade2, populacao2, area2, PIB2, ponto2, densidade2, percapita2);
 
 printf ("\n");
 
