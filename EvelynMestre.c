@@ -88,6 +88,11 @@ float densidade1 =  populacao1/ area1;
 float densidade2 = populacao2/ area2;
 float percapita1 = PIB1/ populacao1;
 float percapita2 = PIB2/ populacao2;
+float superpoder1 = area1 + populacao1 + PIB1 + ponto1 + percapita1 + densidade1/1;
+float superpoder2 = area2 + populacao2 + PIB2 + ponto2   + percapita2 + densidade2/ 1;
+float carta1= superpoder1 + area1 + populacao1 + PIB1 + ponto1 + percapita1 + densidade1/1;
+float carta2= superpoder2 + area2 + populacao2 + PIB2    + ponto2 + percapita2 + densidade2/1;
+float resultado = carta1 > carta2;
 
 
 // agora a apresentação das duas cartas de forma mais limpa que consegui reproduzir
@@ -100,15 +105,23 @@ printf ("CARTA 1 \n");
 printf ("\n");
 
 
-printf ("Estado: %c \n Código: %s \n Nome da Cidade: %s \n População: %d \n Área: %f \n PIB: %f \n Número De Pontos Turísticos: %d \n Densidade Populacional: %.2f \n PIB Per Capita: %.2f \n", letra1, codigo1, cidade1, populacao1, area1, PIB1, ponto1, densidade1, percapita1);
+printf ("Estado: %c \n Código: %s \n Nome da Cidade: %s \n População: %d \n Área: %f \n PIB: %f \n Número De Pontos Turísticos: %d \n Densidade Populacional: %.2f \n PIB Per Capita: %.2f \n Super Poder: %f \n", letra1, codigo1, cidade1, populacao1, area1, PIB1, 
+                                                                                                                                                                                            ponto1, densidade1, percapita1,superpoder1);
 
 printf  ("\n");
 printf ("\n");  
 
 printf ("CARTA2 \n");
 printf ("\n");
-printf ("Estado: %s \n Código: %s \n Nome da Cidade: %s \n População: %d \n Área: %f \n PIB: %f \n Número De Pontos Turísticos: %d \n Densidade Populacional: %.2f \n PIB Per Capita: %.2f \n", letra2, codigo2, cidade2, populacao2, area2, PIB2, ponto2, densidade2, percapita2);
+printf ("Estado: %s \n Código: %s \n Nome da Cidade: %s \n População: %d \n Área: %f \n PIB: %f \n Número De Pontos Turísticos: %d \n Densidade Populacional: %.2f \n PIB Per Capita: %.2f \n Super poder: %f \n", letra2, codigo2, cidade2, populacao2, area2, PIB2, ponto2, densidade2, percapita2, superpoder2);
 
 printf ("\n");
+
+
+
+//Resultado da comparação
+
+
+printf ("O resultado da comparação de cartas é: %f \n", resultado);
 
 }
