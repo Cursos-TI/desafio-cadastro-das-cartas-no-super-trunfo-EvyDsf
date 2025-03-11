@@ -92,8 +92,6 @@ float superpoder1 = area1 + populacao1 + PIB1 + ponto1 + percapita1 + densidade1
 float superpoder2 = area2 + populacao2 + PIB2 + ponto2   + percapita2 + densidade2/ 1;
 float carta1= superpoder1 + area1 + populacao1 + PIB1 + ponto1 + percapita1 + densidade1/1;
 float carta2= superpoder2 + area2 + populacao2 + PIB2    + ponto2 + percapita2 + densidade2/1;
-float resultado = carta1 > carta2;
-
 
 // agora a apresentação das duas cartas de forma mais limpa que consegui reproduzir
 
@@ -101,27 +99,34 @@ printf ("\n");
 printf ("\n");
 
 
-printf ("CARTA 1 \n");
-printf ("\n");
+printf (" CARTA 1 \n");
 
-
-printf ("Estado: %c \n Código: %s \n Nome da Cidade: %s \n População: %d \n Área: %f \n PIB: %f \n Número De Pontos Turísticos: %d \n Densidade Populacional: %.2f \n PIB Per Capita: %.2f \n Super Poder: %f \n", letra1, codigo1, cidade1, populacao1, area1, PIB1, 
+printf (" Estado: %c \n Código: %s \n Nome da Cidade: %s \n População: %d \n Área: %f \n PIB: %f \n Número De Pontos Turísticos: %d \n Densidade Populacional: %.2f \n PIB Per Capita: %.2f \n Super Poder: %f \n", letra1, codigo1, cidade1, populacao1, area1, PIB1, 
                                                                                                                                                                                             ponto1, densidade1, percapita1,superpoder1);
 
 printf  ("\n");
 printf ("\n");  
 
-printf ("CARTA2 \n");
-printf ("\n");
-printf ("Estado: %s \n Código: %s \n Nome da Cidade: %s \n População: %d \n Área: %f \n PIB: %f \n Número De Pontos Turísticos: %d \n Densidade Populacional: %.2f \n PIB Per Capita: %.2f \n Super poder: %f \n", letra2, codigo2, cidade2, populacao2, area2, PIB2, ponto2, densidade2, percapita2, superpoder2);
+printf (" CARTA2 \n");
+
+printf (" Estado: %s \n Código: %s \n Nome da Cidade: %s \n População: %d \n Área: %f \n PIB: %f \n Número De Pontos Turísticos: %d \n Densidade Populacional: %.2f \n PIB Per Capita: %.2f \n Super poder: %f \n", letra2, codigo2, cidade2, populacao2, area2, PIB2, ponto2, densidade2, percapita2, superpoder2);
 
 printf ("\n");
 
+printf ("Agora vamos ver quem tem a maior população \n");
 
+printf ("Carta 1: %s %d \n ", cidade1, populacao1);
+printf ("Carta 2: %s %d \n", cidade2, populacao2);
 
-//Resultado da comparação
+//aplicação de estrutura composta para o super trunfo
 
-
-printf ("O resultado da comparação de cartas é: %f \n", resultado);
+if (populacao1>populacao2) {
+printf ("Carta 1 (%s) ganhou!!! \n", cidade1);
+} else {
+printf ("Carta 2 (%s) ganhou!!! \n", cidade2);
 
 }
+
+
+}
+
