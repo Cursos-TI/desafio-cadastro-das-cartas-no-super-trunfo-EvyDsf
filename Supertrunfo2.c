@@ -90,8 +90,7 @@ float percapita1 = PIB1/ populacao1;
 float percapita2 = PIB2/ populacao2;
 float superpoder1 = area1 + populacao1 + PIB1 + ponto1 + percapita1 + densidade1/1;
 float superpoder2 = area2 + populacao2 + PIB2 + ponto2   + percapita2 + densidade2/ 1;
-float carta1= superpoder1 + area1 + populacao1 + PIB1 + ponto1 + percapita1 + densidade1/1;
-float carta2= superpoder2 + area2 + populacao2 + PIB2    + ponto2 + percapita2 + densidade2/1;
+
 
 // agora a apresentação das duas cartas de forma mais limpa que consegui reproduzir
 
@@ -113,20 +112,105 @@ printf (" Estado: %s \n Código: %s \n Nome da Cidade: %s \n População: %d \n 
 
 printf ("\n");
 
-printf ("Agora vamos ver quem tem a maior população \n");
+//uso do switch 
 
-printf ("Carta 1: %s %d \n ", cidade1, populacao1);
-printf ("Carta 2: %s %d \n", cidade2, populacao2);
+int opção;
 
-//aplicação de estrutura composta para o super trunfo
+printf ("Escolha uma opção: \n");
+printf ("1 - Comparar as populações das cidades \n");
+printf ("2 - Comparar as áreas das cidades \n");
+printf ("3 - Comparar os PIBs das cidades \n");
+printf ("4 - Comparar a densidade populacional das cidades \n");
+printf ("5 - Vamos comparar o número de pontos turísticos das cidades \n");
+printf ("6 - Vamos comparar o PIB per capita das cidades \n");
+scanf ("%d", &opção);
 
-if (populacao1>populacao2) {
-printf ("Carta 1 (%s) ganhou!!! \n", cidade1);
+
+switch (opção) {
+
+case 1: 
+
+if (populacao1 > populacao2) {
+    printf ("A cidade %s tem uma população maior que a cidade %s \n", cidade1, cidade2);
+} else if (populacao1 < populacao2) {
+    printf ("A cidade %s tem uma população maior que a cidade %s \n", cidade2, cidade1);
 } else {
-printf ("Carta 2 (%s) ganhou!!! \n", cidade2);
+    printf ("As cidades tem a mesma população \n");
 
 }
 
+break;
+ 
+
+case 2:
+
+if (area1 > area2) {
+    printf ("A cidade %s tem uma área maior que a cidade %s \n", cidade1, cidade2);
+} else if (area1 < area2) {
+    printf ("A cidade %s tem uma área maior que a cidade %s \n", cidade2, cidade1);
+} else {
+    printf ("As cidades tem a mesma área \n");
+
+    break;
+
+    case 3:
+    
+    if (PIB1 > PIB2) {
+        printf ("A cidade %s tem um PIB maior que a cidade %s \n", cidade1, cidade2);
+    } else if (PIB1 < PIB2) {
+        printf ("A cidade %s tem um PIB maior que a cidade %s \n", cidade2, cidade1);
+    } else {
+        printf ("As cidades tem o mesmo PIB \n");
+    }
+
+    break;
+
+    case 4:
+       
+    if (densidade1 > densidade2) {
+        printf ("A cidade (%s) tem uma densidade populacional maior que a cidade (%s) \n", cidade1, cidade2);
+    } else if (densidade1 < densidade2) {
+        printf ("A cidade (%s) tem uma densidade populaciona maior que a cidade (%s) \n",cidade2, cidade1);
+    } else {
+        printf ("As cidades tem a mesma densidade populacional \n");
+    }
+
+    break;
+
+case 5:
+
+if (ponto1 > ponto2) {
+    printf ("A cidade %s tem mais pontos turísticos que a cidade %s \n", cidade1, cidade2);     
+} else if (ponto1 < ponto2) {
+    printf ("A cidade %s tem mais pontos turísticos que a cidade %s \n", cidade2, cidade1);
+} else {
+    printf ("As cidades tem o mesmo número de pontos turísticos \n");
+
+}
+ break;
+
+ case 6:
+    printf ("Vamos então comparar o PIB per capita das cidades \n");
+    if (percapita1 > percapita2) {
+        printf ("A cidade %s tem um PIB per capita maior que a cidade %s \n", cidade1, cidade2);
+    } else if (percapita1 < percapita2) {
+        printf ("A cidade %s tem um PIB per capita maior que a cidade %s \n", cidade2, cidade1);
+    } else {
+        printf ("As cidades tem o mesmo PIB per capita \n");
+    }
+
+break;
+
+    default:
+    printf ("Opção inválida \n");
+    break;
+
+
+
+
 
 }
 
+}
+
+}
